@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="RustCalculator" />
+  <link rel="apple-touch-icon" href="./logo.jpg" />
+  <link rel="stylesheet" href="app.css">
+
+  <title>RustCalc</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div class="App">
+    <h1>Rust Tool Cupboard Cost Calculator</h1>
+    <div class="main-wrapper">
+      <form>
+        <label>Wood:</label>
+        <input class="textinputform" type="text" placeholder="Wood" name="wood"></input>
+
+        <label>Stone:</label>
+        <input class="textinputform" type="text" placeholder="Stone" name="stone"></input>
+
+        <label>Metal:</label>
+        <input class="textinputform" type="text" placeholder="Metal" name="metal"></input>
+
+        <label>High Quality Metal:</label>
+        <input class="textinputform" type="text" placeholder="High Quality  Metal" name="hqmetal"></input>
+
+        <label>Server Stack Size:</label>
+        <input class="textinputform" type="text" placeholder="Server Stack Size" name="stacksize"></input>
+        <input class="button-primary" type="submit" value="Calculate"></input>
+      </form>
+      <div class="grid-container">
+        <div class="grid-item">
+          <img class="recImage" src="wood.png" alt="wood">
+          <p class="woodText">Wood: 0</p>
+        </div>
+        <div class="grid-item">
+          <img class="recImage" src="stone.png" alt="wood">
+          <p class="stoneText">Stone: 0</p>
+        </div>
+        <div class="grid-item">
+          <img class="recImage" src="metal.png" alt="wood">
+          <p class="metalText">Metal: 0</p>
+        </div class="woodText">
+        <div class="grid-item">
+          <img class="recImage" src="hqmetal.png" alt="wood">
+          <p class="hqmetalText">High Quality Metal: 0</p>
+        </div>
+      </div>
+      <p class="copyrightText">©2020 Allstreamer_</p>
+    </div>
+  </div>
+</body>
+
+<script src="App.js"></script>
+
+</html>

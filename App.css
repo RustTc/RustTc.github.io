@@ -1,0 +1,82 @@
+@font-face {
+  font-family: rustFont;
+  src: url(Rust.ttf);
+}
+
+html {
+  background-image: url("bg_blur.jpg");
+}
+
+.App {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: rustFont;
+}
+.main-wrapper {
+  height: 95vh;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background: rgba(20, 20, 20, 255);
+  opacity: 0.9;
+}
+
+form {
+  display: grid;
+}
+
+input[type="text"] {
+  margin: 10px;
+
+  border-radius: 20px;
+
+  background-color: white;
+  background-position: 10px 10px;
+  padding: 10px;
+
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: rustFont;
+}
+
+input[type="submit"] {
+  border-radius: 20px;
+  background-color: #1abc9c;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: rustFont;
+}
+
+label {
+  color: bisque;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #e67e22;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}

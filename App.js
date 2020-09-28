@@ -15,11 +15,11 @@ form.addEventListener("submit", (event) => {
 
   const Data = new FormData(form);
 
-  const stoneForm = Data.get("stone");
-  const metalForm = Data.get("metal");
-  const woodForm = Data.get("wood");
-  const hqmetalForm = Data.get("hqmetal");
-  const ServerStackSizeForm = Data.get("stacksize");
+  const stoneForm = Data.get("stone") == "" ? "0" : Data.get("stone");
+  const metalForm = Data.get("metal") == "" ? "0" : Data.get("metal");
+  const woodForm = Data.get("wood") == "" ? "0" : Data.get("wood");
+  const hqmetalForm = Data.get("hqmetal") == "" ? "0" : Data.get("hqmetal");
+  const ServerStackSizeForm = Data.get("stacksize") == "" ? "0" : Data.get("stacksize");
 
   const stone = parseInt(stoneForm);
   const metal = parseInt(metalForm);
@@ -41,10 +41,10 @@ form.addEventListener("submit", (event) => {
   const requiredwood = Math.round(TotalSize * woodPercent);
   const requiredHQ = Math.round(TotalSize * highQualityPercent);
 
-  let woodStr = `Wood: ${requiredwood == nan ? 0 : requiredwood}`;
-  let stoneStr = `Stone: ${requiredStone == nan ? 0 : requiredStone}`;
-  let metalStr = `Metal: ${requiredmetalscaps == nan ? 0 : requiredmetalscaps}`;
-  let hqmetalStr = `High Quality Metal: ${requiredHQ == nan ? 0 : requiredHQ}`;
+  let woodStr = `Wood: ${isNaN(requiredwood) ? 0 : requiredwood}`;
+  let stoneStr = `Stone: ${isNaN(requiredStone) ? 0 : requiredStone}`;
+  let metalStr = `Metal: ${isNaN(requiredmetalscaps) ? 0 : requiredmetalscaps}`;
+  let hqmetalStr = `High Quality Metal: ${isNaN(requiredHQ) ? 0 : requiredHQ}`;
 
   woodText.innerHTML = woodStr;
   stoneText.innerHTML = stoneStr;

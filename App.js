@@ -41,10 +41,10 @@ form.addEventListener("submit", (event) => {
   const requiredwood = Math.round(TotalSize * woodPercent);
   const requiredHQ = Math.round(TotalSize * highQualityPercent);
 
-  let woodStr = `Wood: ${requiredwood}`;
-  let stoneStr = `Stone: ${requiredStone}`;
-  let metalStr = `Metal: ${requiredmetalscaps}`;
-  let hqmetalStr = `High Quality Metal: ${requiredHQ}`;
+  let woodStr = `Wood: ${requiredwood == nan ? 0 : requiredwood}`;
+  let stoneStr = `Stone: ${requiredStone == nan ? 0 : requiredStone}`;
+  let metalStr = `Metal: ${requiredmetalscaps == nan ? 0 : requiredmetalscaps}`;
+  let hqmetalStr = `High Quality Metal: ${requiredHQ == nan ? 0 : requiredHQ}`;
 
   woodText.innerHTML = woodStr;
   stoneText.innerHTML = stoneStr;
